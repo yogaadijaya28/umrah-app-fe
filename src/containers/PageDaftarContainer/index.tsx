@@ -1,5 +1,3 @@
-// index.tsx
-
 import { useForm } from "react-hook-form";
 import * as Yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -39,13 +37,9 @@ export default function PageDaftarContainer() {
             };
 
             PostClientController.mutate(payload);
-            // Formulir berhasil terkirim
             toast.success('Formulir berhasil terkirim');
-
-            // Mengosongkan formulir
             reset();
         } catch (error) {
-            // Formulir gagal terkirim
             toast.error('Formulir gagal terkirim');
         }
     });

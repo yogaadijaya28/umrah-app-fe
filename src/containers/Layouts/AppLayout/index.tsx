@@ -5,11 +5,8 @@ import { hasCookie, getCookie } from 'cookies-next'
 import { useQueryClient } from '@tanstack/react-query';
 import Menu from 'component/menu'
 import FooterComponent from 'component/footer'
-import LoadingComponent from 'component/loadingComponent'
 import { LanguageContext } from '@/context/LanguageContext'
 import { AuthContext } from '@/context/AuthContext'
-import { MenuContext } from '@/context/MenuContext'
-import { UsetGetAuthData } from '@/api/login/query'
 
 
 type Props = {
@@ -24,9 +21,9 @@ export default function AppLayout({ children }: Props) {
 
     const { language } = useContext(LanguageContext);
     const { setUserData, userData, setRunGetCart, setLanguageChart } = useContext(AuthContext);
-    const { menuData, setMenuData, setFooterData } = useContext(MenuContext);
+ 
 
-    const AuthController = UsetGetAuthData(runAuth);
+  
 
 
     const CheckRunAuth = () => {
