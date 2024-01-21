@@ -1,0 +1,66 @@
+stages:
+  - code_quality
+  - build_docker
+  - deploy_staging
+#cache:
+#  key: "$CI_BUILD_REF_NAME"
+# untracked: true    
+#  paths:
+#    - node_modules/
+    
+code_quality:
+  stage: code_quality
+  image: sonarsource/sonar-scanner-cli:latest
+  variables:
+    SONAR_TOKEN: "${SONAR_TOKEN}"
+    SONAR_HOST_URL: "${SONAR_HOST_URL}"
+    GIT_DEPTH: 0
+  script:
+    - sonar-scanner -Dsonar.qualitygate.wait=true
+  allow_failure: true
+  only:
+   - staging-docker
+  tags:
+   - new-shared
+#preparation:
+#  stage: preparation
+#  image: registry-v2.stagingapps.net/build/node:latest
+#  script:
+#    - npm install
+#    - npm run build
+#  only:
+#    - staging-docker
+#  artifacts:
+#    paths:
+#      - "dist"
+#    expire_in: 1 days
+
+build_docker:
+  stage: build_docker
+  image: registry-v2.stagingapps.net/build/docker:18.09.7
+  services:
+    - name: registry-v2.stagingapps.net/build/docker:18.09.7-dind
+  script:
+    - docker info
+    - docker login -u "${CI_REGISTRY_USER}" -p "${CI_REGISTRY_PASSWORD}" registry-v2.stagingapps.net
+    - docker build -t "${CI_REGISTRY_IMAGE}:latest" .
+    - docker tag "${CI_REGISTRY_IMAGE}:latest" "${CI_REGISTRY_IMAGE}:$CI_COMMIT_SHORT_SHA"
+    - docker push "${CI_REGISTRY_IMAGE}:latest"
+    - docker push "${CI_REGISTRY_IMAGE}:$CI_COMMIT_SHORT_SHA"
+  only:
+    - staging-docker
+  tags:
+    - new-shared
+
+deploy_staging:
+  stage: deploy_staging
+  script:
+    - sed -i "s,_IMAGE:VERSION_,${CI_REGISTRY_IMAGE}:$CI_COMMIT_SHORT_SHA," docker-compose.yml
+    - scp docker-compose.yml opmre-fe@192.168.0.84:/home/opmre-fe/app/opmre-frontend
+    - ssh opmre-fe@192.168.0.84 docker login -u "${CI_REGISTRY_USER}" -p "${CI_REGISTRY_PASSWORD}" registry-v2.stagingapps.net
+    - ssh opmre-fe@192.168.0.84 "cd /home/opmre-fe/app/opmre-frontend && docker compose up -d"
+  only:
+    - staging-docker
+  tags:
+    - stg-runner-77
+

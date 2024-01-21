@@ -1,0 +1,519 @@
+/*RESPONSIVE*/
+
+@media only screen and (max-width: 1280px) {
+	.navbar-nav {
+		gap: 0px;
+		width: 100%
+	}
+	.navbar-expand-lg .navbar-nav .nav-link {
+		white-space: nowrap;
+	}
+	.navbar-headerBtn .btn {
+		padding-right: 15px !important;
+		padding-left: 15px !important
+	}
+	.card-category {
+		height: auto;
+	}
+}
+
+@media only screen and (max-width: 1180px) {
+	.container {
+		max-width: 100%
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	.section-talent .col-md-3 {
+		width: 33.33333%
+	}
+	.section-talent .justify-content-between {
+		justify-content: flex-start !important;
+	}
+	.card-category {
+		height: auto;
+	}
+	.search-tech input {
+    min-width: 175px;
+	}
+	header .navbar {
+		height: 65px;
+		padding: 0 !important;
+		justify-content: center;
+	}
+}
+
+@media only screen and (max-width: 991px) {
+	header .navbar {
+		padding: 0 !important
+	}
+	header .navbar .container-fluid {
+		display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 0;
+    width: 60%;
+	}
+	header .navbar-toggler {
+		position: absolute;
+    left: var(--bs-gutter-x,.75rem);
+    top: 18px;
+    padding: 0
+	}
+	header .navbar-toggler,
+	header .navbar-toggler:focus,
+	header .navbar-toggler:active {
+		box-shadow: none;
+		border: none;
+	}
+	header .navbar-toggler + .navbar-collapse {
+		position: absolute;
+    left: 0;
+    top: 65px;
+    background: var(--neutral-10);
+    width: 100%;
+    padding: var(--bs-gutter-x,.75rem);
+    box-shadow: 0px 25px 35px rgba(0, 0, 0, 0.05);
+  }
+  header .navbar-toggler + .navbar-collapse {
+  	display: none;
+  }
+  header .navbar-toggler + .navbar-collapse.show {
+    display: flex;
+    flex-direction: column-reverse;
+    max-height: calc(100vh - 60px);
+    overflow: auto;
+	}
+	header .navbar-toggler + .navbar-collapse form {
+		margin-bottom: 10px;
+	}
+	header .navbar-toggler + .navbar-collapse form,
+	header .navbar-toggler + .navbar-collapse form > div {
+		width: 100%
+	}
+	.nav-list-bottom .nav {
+		padding-left: var(--bs-gutter-x,.75rem) !important;
+		padding-right: var(--bs-gutter-x,.75rem) !important;
+	}
+	.nav-list-bottom ul li {
+		margin-right: 10px;
+	}
+	.nav-list-bottom ul li a {
+		padding: 0
+	}
+	.navbar-toggler-icon {
+		position: relative;
+    background: var(--primary-blue-base);
+    height: 3px;
+	}
+	.navbar-toggler-icon:before {
+		content: "";
+		background: var(--primary-blue-base);
+    height: 3px;
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: -8px;
+	}
+	.navbar-toggler-icon:after {
+		content: "";
+		background: var(--primary-blue-base);
+    height: 3px;
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 8px;
+	}
+	.navbar-brand {
+		margin-right: 0
+	}
+	.container {
+		max-width: 100%
+	}
+	.section-news {
+		padding: 50px 0
+	}
+	.section-visafree {
+		padding: 0px 20px 20px
+	}
+	.section-onboard .d-flex.mt-4,
+	.btn-sec8-home,
+	.what-role-client.mt-5 .mt-5 + .d-flex  {
+		display: block !important;
+	}
+	.section-onboard .d-flex.mt-4 button,
+	.btn-sec8-home button,
+	.what-role-client.mt-5 .mt-5 + .d-flex > button{
+		width: 100%;
+    margin: 10px 0 !important;
+    padding: 0 10px;
+	}
+	.section-benefit {
+		padding: 50px 0
+	}
+	.section-step-hiring {
+		padding: 50px 20px;
+	}
+	.section-benefit p.heading-regular-bold {
+		height: 100px;
+	}
+	.card-category {
+		height: auto;
+	}
+	.top-banner {
+		padding: 20px;
+	}
+	.quote-header,
+	.header-testimonial {
+		display: block;
+		text-align: center;
+	}
+	.quote-header .avatar {
+		width: 75px;
+		height: 75px;
+	}
+	.swiper {
+		padding-top: 50px;
+	}
+	.quote-container > img {
+		position: absolute;
+		opacity: 0.2
+	}
+	.quote-container > p {
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+	}
+	.section-news .btn.btn-large.btn-outline-white.mt-5 {
+		width: 100%;
+		padding: 0
+	}
+	.header-browse-talent {
+		background-color: var(--primary-blue-base)
+	}
+	.account-page {
+		overflow: hidden;
+	}
+	.line-footer + .row {
+		display: block !important;
+	}
+	.line-footer + .row .col-md-6 {
+		width: 100%;
+		text-align: center !important;
+	}
+	.navbar-nav .dropdown-menu {
+		width: 100%
+	}
+	.dropdown-how li {
+		float: none;
+		width: 100%;
+		margin: 0
+	}
+	.dropdown-how li a > img {
+    margin-right: 20px;
+    max-height: 60px;
+    width: 60px;
+	}
+	.sticky-top.bg-body.header {
+		z-index: 1021
+	}
+	.navbar-nav {
+		margin-bottom: 0 !important
+	}
+	.dropdown-how li a {
+		padding: 15px;
+	}
+	.account-page .col-md-7.p-4.pb-0 {
+		padding-right: calc(var(--bs-gutter-x) * .5)!important;
+    padding-left: calc(var(--bs-gutter-x) * .5)!important; 
+	}
+	.register-step.center-step {
+		max-width: 100%;
+		padding: 0 15px !important
+	}
+	.account-page .navbar-brand {
+		padding-right: calc(var(--bs-gutter-x) * .5)!important;
+    padding-left: calc(var(--bs-gutter-x) * .5)!important; 	
+	}
+	.contact-us .register-form {
+		max-width: 90%;
+		padding: 15px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	footer .col,
+	footer .col-3 {
+		width: 100%;
+		flex: auto;
+	}
+	.section-category .col-md-4 {
+		margin-bottom: 20px;
+	}
+	p.w-75 {
+		width: 100% !important
+	}
+	.nav-list-bottom .nav {
+		display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow: auto;
+	}
+	.nav-list-bottom .nav::-webkit-scrollbar {
+	  display: none;
+	}
+	.nav-list-bottom .nav {
+	  -ms-overflow-style: none;
+	  scrollbar-width: none;
+	}
+	.nav-list-bottom .nav li {
+		white-space: nowrap;
+	}
+	.nav-list-bottom ul li {
+    margin-right: 20px;
+	}
+	.section-news {
+		height: auto;
+	}
+	#carousel-news {
+		margin-top: 30px;
+	}
+	.section-news .btn.mt-5 {
+		margin-top: 10px !important;
+		width: auto !important;
+    padding: 0 20px !important;
+	}
+	.col-md-6.text-end,
+	footer > .container > div:last-child p {
+		text-align: center !important;
+	}
+	.section-talent .col-md-3 {
+		width: 50%
+	}
+	.card-for-client .desc-box + .col-md-5 {
+		padding: 0
+	}
+	.header-browse-talent ul {
+		display: block !important;
+	}
+	.header-browse-talent ul li {
+		width: 100%
+	}
+	.section-category .card.card-category .row:first-child {
+		display: flex;
+	}
+	.section-category .card.card-category .row:first-child > .col-md-2.text-end {
+		position: absolute;
+		top: 30px;
+	}
+	.card-category ul li:first-child {
+		padding: 0 !important;
+    margin-bottom: 20px;
+	}
+	.section-benefit p.heading-regular-bold {
+    height: auto;
+	}
+	.header-talent-category {
+		max-height: none;
+	}
+	.header-talent-category .col-md-8,
+	.header-talent-category .col-md-4 {
+		padding: 30px 10px !important;
+	}
+	.header-talent-category .col-md-4.pe-0 > img {
+		border-radius: 10px;
+	}
+	.other-category {
+		display: block !important;
+	}
+	.other-category ul {
+		overflow: auto;
+	  -ms-overflow-style: none;
+	  scrollbar-width: none;
+	}
+	.other-category ul::-webkit-scrollbar {
+	  display: none;
+	}
+	.other-category li {
+		margin: 0 15px 0 0
+	}
+	.card-step-hire {
+		margin: 10px 0
+	}
+	.header-talent-category {
+		margin-left: var(--bs-gutter-x,.75rem);
+		margin-right: var(--bs-gutter-x,.75rem);
+	}
+	.banner-work-permitt.pt-4 .col-md-5.mt-5 {
+		margin-top: 0 !important
+	}
+	.banner-work-permitt.pt-4 .col-md-5.mt-5 .badge {
+		margin-bottom: 20px
+	}
+	.top-banner .container .col.d-flex.align-items-center {
+		display: block !important;
+	}
+	.benefit-work-permitt.py-5 .row.px-5 {
+		padding: 0 !important
+	}
+	.banner-footer-work-permitt {
+		margin-bottom: 0;
+		padding: 0 30px 50px 30px;
+	}
+	.section-faq {
+		padding: 20px !important
+	}
+	.banner-how-talent.mt-4 .heading-xl-semi {
+		font-size: 26px;
+		line-height: normal;
+	}
+	.how-join-talent.mt-4 .row:nth-child(2) {
+		margin-top: 0 !important
+	}
+	.how-join-talent.mt-4 .row:nth-child(2),
+	.how-join-talent.mt-4 .row:nth-child(3),
+	.how-join-talent.mt-4 .row:nth-child(4) {
+		flex-direction: column-reverse !important;
+	}
+	.js-sticky-widget {
+		position: static !important;
+		height: auto !important;
+    width: 100% !important;
+	}
+	.js-sticky-widget.sticksy-dummy-node {
+		display: none !important;
+	}
+	.search-job {
+		position: relative !important;
+		top: auto;
+		margin-right: 15px;
+    margin-left: 15px;
+	}
+	.form-search-job,
+	.d-flex.filter-job,
+	.action-report,
+	.job-vacancy-title {
+		display: block !important;
+	}
+	.btn-submit .btn,
+	.d-flex.filter-job .dropdown,
+	.d-flex.filter-job .dropdown .btn,
+	.action-report > *,
+	.job-vacancy-title > * {
+		width: 100%
+	}
+	.action-report > * {
+		display: block;
+		text-align: center;
+	}
+	.job-detail-overflow {
+		max-height: none;
+		overflow: visible;
+	}
+	.job-vacancy-title > * {
+		margin: 10px 0
+	}
+	.section-onboard .col-lg-2.text-center img {
+		margin-bottom: 20px;
+	}
+	.section-onboard h3,
+	.section-onboard h5,
+	.section-onboard p {
+		text-align: center;
+	}
+	.register-step .nav-tabs .nav-item.col-md-6 {
+		flex: 0 0 auto;
+    width: 50%;
+	}
+	.top-focused {
+		padding-top: 50px;
+	}
+	.startup-agencies .header-browse-talent ul li {
+		border-right: none;
+		margin: 20px 0
+	}
+	.startup-agencies .header-browse-talent {
+		height: auto;
+	}
+	.banner-footer-work-permitt .col-md-6 {
+		flex: 0 0 auto;
+    width: 70%;
+	}
+}
+
+@media only screen and (max-width: 660px) {
+	header .navbar .container-fluid {
+		width: 100%;
+		padding-left: 60px;
+		height: 60px;
+	}
+	header .navbar-toggler + .navbar-collapse {
+		top: 60px;
+	}
+	.navbar-headerBtn button {
+		padding-left: 10px !important;
+		padding-right: 10px !important;
+	}
+	.section-benefit .col,
+	.section-step-hiring .col {
+		width: 100%;
+    flex: auto;
+    margin: 10px 0;
+  }
+  .card-benefit {
+  	min-height: 0
+  }
+  .section-benefit .col.number-card-benefit,
+  .section-step-hiring .col.number-card-benefit {
+    width: 45px;
+	}
+	.section-benefit .col.number-card-benefit p {
+		height: auto;
+	}
+	.navbar-brand img {
+		width: 100px;
+	}
+	.swiper-slide-active .card {
+		transform: none;
+		width: 100%
+	}
+	.section-news {
+		margin-top: 0
+	}
+	.card-for-talent .btn {
+		white-space: nowrap;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.section-talent .col-md-3 {
+		width: 100%
+	}
+	.navbar-toggler-icon {
+		width: 25px;
+	}
+	header .navbar .container-fluid {
+		padding-left: 50px;
+	}
+	.navbar-brand img {
+    width: 60px;
+	}
+	.navbar-headerBtn button {
+		font-size: var(--size-12)
+	}
+	.heading-xl-semi {
+		font-size: 36px;
+		line-height: normal;
+	}
+	.header-title img {
+		display: none;
+	}
+	.top-banner {
+    padding: 20px 0;
+	}
+	.register-step {
+		padding: 0
+	}
+	.account-page .navbar-brand img {
+		width: auto;
+	}
+}
