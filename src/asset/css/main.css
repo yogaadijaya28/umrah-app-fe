@@ -1515,7 +1515,7 @@ body {
   height: auto;
 }
 .contact-us .register-form .form-select {
-  border: 1px solid var(--secondry-navy-20);
+  /* border: 1px solid var(--secondry-navy-20); */
   border-radius: var(--radius-5);
   padding: 10px;
   color: var(--color-font);

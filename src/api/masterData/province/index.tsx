@@ -1,47 +1,18 @@
 import { call } from '@/api/baseApi/index'
 import { METHODS } from '@/api/baseApi/index'
-import { CommonArrayResponse } from '@/api/baseApi/types'
-import { ProvinceResponses, CityResponses, PostalCodeResponses } from './types'
+import {  programResponse } from './types'
+import {  CommonStrapiArrayResponse } from '@/api/baseApi/types'
 
-const overrideBaseUrl = process.env.NEXT_PUBLIC_API_BASE_URL
+const overrideBaseUrl = process.env.NEXT_PUBLIC_STRAPI_UMRAH_BASE_URL
 
 
-export const getProvince = async (): Promise<CommonArrayResponse<ProvinceResponses>> => {
+export const getPrograms = async (
+    ): Promise<CommonStrapiArrayResponse<programResponse>> => {
     const response = await call({
         method: METHODS.GET,
         overrideBaseUrl,
-        subUrl: `/api/v1/data/province`,
-        useStrapi: false,
-    })
-    return response.data
-}
-
-export const getCity = async (provinceId: string): Promise<CommonArrayResponse<CityResponses>> => {
-    const response = await call({
-        method: METHODS.GET,
-        overrideBaseUrl,
-        subUrl: `api/v1/data/city?province_id=${provinceId}`,
-        useStrapi: false,
-    })
-    return response.data
-}
-
-export const getDistrict = async (cityId: string): Promise<CommonArrayResponse<CityResponses>> => {
-    const response = await call({
-        method: METHODS.GET,
-        overrideBaseUrl,
-        subUrl: `api/v1/data/district?city_id=${cityId}`,
-        useStrapi: false,
-    })
-    return response.data
-}
-
-export const getPostalCode = async (districtId: string): Promise<CommonArrayResponse<PostalCodeResponses>> => {
-    const response = await call({
-        method: METHODS.GET,
-        overrideBaseUrl,
-        subUrl: `api/v1/data/postalcode?district_id=${districtId}`,
-        useStrapi: false,
+        subUrl: `/api/tipes`,
+        useStrapi: true,
     })
     return response.data
 }

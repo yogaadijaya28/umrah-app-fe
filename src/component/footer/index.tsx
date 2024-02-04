@@ -41,12 +41,12 @@ export default function FooterComponent() {
         </ul>
       </div>
       <div className="col p-3">
-        <p className="regular-text-bold mb-4">Social</p>
+        {/* <p className="regular-text-bold mb-4">Social</p>
         <div>
           <img className="mx-2" src="/assets/img/icon/ic-facebook.svg" alt="" />
           <img className="mx-2" src="/assets/img/icon/ic-linkedin.svg" alt="" />
           <img className="mx-2" src="/assets/img/icon/ic-instagram.svg" alt="" />
-        </div>
+        </div> */}
       </div>
     </div>
     <div className="line-footer" />

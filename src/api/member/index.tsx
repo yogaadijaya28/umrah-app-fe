@@ -3,7 +3,7 @@ import { METHODS } from '@/api/baseApi/index'
 import { CommonStrapiArrayResponse, CommonStrapiResponse } from '@/api/baseApi/types'
 import { postClientParams, postClientResponse } from './types'
 
-const overrideBaseUrl = process.env.NEXT_PUBLIC_STRAPI_MELAWAI_BASE_URL
+const overrideBaseUrl = process.env.NEXT_PUBLIC_STRAPI_UMRAH_BASE_URL
 
 export const postClient = async (params: postClientParams): Promise<CommonStrapiResponse<postClientResponse>> => {
     const response = await call({

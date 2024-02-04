@@ -14,9 +14,6 @@ import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
-import LanguageContextProvider from '@/context/LanguageContext'
-import AuthContextProvider from "@/context/AuthContext";
-import MenuContextProvider from "@/context/MenuContext";
 import AppLayout from '@/containers/Layouts/AppLayout'
 import { useState } from 'react'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
@@ -37,18 +34,18 @@ export default function App({ Component, pageProps }: AppProps) {
     return (
         <>
             <QueryClientProvider client={queryClient}>
-                <LanguageContextProvider>
-                    <AuthContextProvider>
-                        <MenuContextProvider>
-                            <ReactQueryDevtools initialIsOpen={false} />
 
-                            <AppLayout>
-                                <Component {...pageProps} />
-                            </AppLayout>
 
-                        </MenuContextProvider>
-                    </AuthContextProvider>
-                </LanguageContextProvider>
+
+                <ReactQueryDevtools initialIsOpen={false} />
+
+                <AppLayout>
+                    <Component {...pageProps} />
+                </AppLayout>
+
+
+
+
             </QueryClientProvider>
         </>
     );

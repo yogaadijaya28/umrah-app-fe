@@ -17,3 +17,8 @@ export interface CommonStrapiPagination {
     pageCount?: number
     total?: number
 }
+export interface CommonArrayResponse<T = any> {
+    status?:number
+    message?: string
+    result?: Array<T>
+}

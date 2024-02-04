@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 export default function MenuComponent() {
@@ -7,9 +8,9 @@ export default function MenuComponent() {
             <header className="sticky-top bg-body header">
                 <nav className="navbar navbar-expand-lg border-bottom bg-body">
                     <div className="container-fluid">
-                        <a className="navbar-brand" href="01-homepage.html">
+                        <Link className="navbar-brand" href="/">
                             <img src="/assets/img/logo-dal.png" style={{ width: '4rem !important' }} alt="" />
-                        </a>
+                        </Link>
                         <button type="button" className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                             <span className="navbar-toggler-icon" />
                             <i className="fa-solid fa-bars" />
@@ -26,8 +27,11 @@ export default function MenuComponent() {
                                     <img src="/assets/img/icon/ic-search-2.svg" className="seach-nav" alt="" />
                                 </div>
                             </form>
+                            <a href='/daftar'>
                             <button type="button" className="btn btn-medium btn-primary mx-2 py-1 uppercase-text">
+
                                 Daftar Sekarang</button>
+                                </a>
                         </div>
                     </div>
                 </nav>

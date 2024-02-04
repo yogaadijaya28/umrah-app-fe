@@ -1,17 +1,10 @@
-export interface ProvinceResponses {
+export interface programResponse {
     id: number
-    name: string
-    inisial?: string
-    is_use_area?: boolean
-}
+    attributes:{
+        tipeprogram: string
+        createdAt: string
+        updatedAt: string
+        publishedAt: string
+    }
 
-export interface CityResponses {
-    id: number
-    name: string
-}
-
-
-export interface PostalCodeResponses {
-    id: number
-    value: string
 }
