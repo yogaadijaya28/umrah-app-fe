@@ -66,28 +66,28 @@ const PageHomeContainer = () => {
                                                 <div className="col-lg-2 text-center"><img src="/assets/img/icon/ic-money-bag.svg" alt="" /></div>
                                                 <div className="col-lg-10">
                                                     <h5 className="heading-small-semi">TIKET PESAWAT &amp; HOTEL SUDAH DIBOOKING</h5>
-                                                    <p className="regular-text-regular">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, nam!</p>
+                                                    <p className="regular-text-regular"></p>
                                                 </div>
                                             </div>
                                             <div className="row my-2">
                                                 <div className="col-lg-2 text-center"><img src="/assets/img/icon/ic-rating.svg" alt="" /></div>
                                                 <div className="col-lg-10">
                                                     <h5 className="heading-small-semi">MENGUTAMAKAN KUALITAS PELAYANANAN</h5>
-                                                    <p className="regular-text-regular">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, recusandae qui!</p>
+                                                    <p className="regular-text-regular"></p>
                                                 </div>
                                             </div>
                                             <div className="row my-2">
                                                 <div className="col-lg-2 text-center"><img src="/assets/img/icon/ic-timer.svg" alt="" /></div>
                                                 <div className="col-lg-10">
                                                     <h5 className="heading-small-semi">PELAKSANAAN IBADAH UMROH SESUAI SUNNAH</h5>
-                                                    <p className="regular-text-regular">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, ipsa!</p>
+                                                    <p className="regular-text-regular"></p>
                                                 </div>
                                             </div>
                                             <div className="row my-2">
                                                 <div className="col-lg-2 text-center"><img src="/assets/img/icon/ic-clock.svg" alt="" /></div>
                                                 <div className="col-lg-10">
                                                     <h5 className="heading-small-semi">BERIZIN RESMI KEMENAG</h5>
-                                                    <p className="regular-text-regular">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, consequatur ipsam!</p>
+                                                    <p className="regular-text-regular"></p>
                                                 </div>
                                             </div>
                                             <div className="d-flex mt-4">
@@ -106,8 +106,8 @@ const PageHomeContainer = () => {
             </div>
             <div className="section-testimonial">
                 <div className="container">
-                    <h2 className="heading-medium-semi text-center m-0">Let’s hear what Client’s talk about our Talents</h2>
-                    <p className="large-text-regular text-center mt-4">Discover What Others Are Saying About Our Talented Professionals</p>
+                    <h2 className="heading-medium-semi text-center m-0">Kumpulan Testimoni dan Rekomendasi  Biro Travel Dal Tour </h2>
+             
                     <Swiper
                         effect={'coverflow'}
                         grabCursor={true}
@@ -130,23 +130,17 @@ const PageHomeContainer = () => {
                                         <div className="header-testimonial">
                                             <img className="avatar" src="/assets/img/profile-5.png" />
                                             <div className="mx-3">
-                                                <p className="medium-text-semi m-0 name">Justin Lee</p>
-                                                <p className="small-text-regular m-0 text-left">CEO Point-Star.net</p>
-                                                <div>
-                                                    <img src="/assets/img/icon/start-fill.svg" alt="" />
-                                                    <img src="/assets/img/icon/start-fill.svg" alt="" />
-                                                    <img src="/assets/img/icon/start-fill.svg" alt="" />
-                                                    <img src="/assets/img/icon/start-fill.svg" alt="" />
-                                                    <img src="/assets/img/icon/start-outline.svg" alt="" />
-                                                </div>
+                                                <p className="medium-text-semi m-0 name">Keluarga Pak Ekhsyan</p>
+                                              
+                                           
                                             </div>
                                         </div>
-                                        <img src="/assets/img/icon/ic-pointstrart.png" alt="" />
+                                   
                                     </div>
                                     <div className="quote-container">
                                         <img src="/assets/img/icon/ic-quote.svg" alt="" />
                                         <p className="small-text-regular mx-2">
-                                            a [The CEO] is a sterling entrepreneur who has successfully built one of the best software development teams around. His knowledge and expertise in web-based software development is top-notch having gained experience from Silicon Valley. With his personal and hands-on style of working with his team, he has put together a highly competent team that is able to deliver high-quality work on-time and within budget.
+                                        Alhamdulillah, kami sekeluarga sudah sampai rumah di Yogya, tak lupa saya banyak haturkan terima kasih kepada Dal Tour yang banyak memberikan bimbingan selama di tanah suci serta kepada Ustadz Syuaib, Ustad Zulkifli, Ustad Junaidi, Ust. Rizal, serta seluruh jamaah Umroh Dal Tour yang kekeluargaannya sangat baik tidak bisa   dilupakan. Semoga tahun-tahun berikutnya, kita bisa bersama lagi dengan Biro Dal Tour. Aamiin.
                                         </p>
                                     </div>
                                 </div>
@@ -157,23 +151,17 @@ const PageHomeContainer = () => {
                                         <div className="header-testimonial">
                                             <img className="avatar" src="/assets/img/profile-5.png" />
                                             <div className="mx-3">
-                                                <p className="medium-text-semi m-0 name">Justin Lee</p>
-                                                <p className="small-text-regular m-0 text-left">CEO Point-Star.net</p>
-                                                <div>
-                                                    <img src="/assets/img/icon/start-fill.svg" alt="" />
-                                                    <img src="/assets/img/icon/start-fill.svg" alt="" />
-                                                    <img src="/assets/img/icon/start-fill.svg" alt="" />
-                                                    <img src="/assets/img/icon/start-fill.svg" alt="" />
-                                                    <img src="/assets/img/icon/start-outline.svg" alt="" />
-                                                </div>
+                                                <p className="medium-text-semi m-0 name">Keluarga Pak Ahmad Syalabi</p>
+                                              
+                                           
                                             </div>
                                         </div>
-                                        <img src="/assets/img/icon/ic-pointstrart.png" alt="" />
+                                   
                                     </div>
                                     <div className="quote-container">
                                         <img src="/assets/img/icon/ic-quote.svg" alt="" />
                                         <p className="small-text-regular mx-2">
-                                            a [The CEO] is a sterling entrepreneur who has successfully built one of the best software development teams around. His knowledge and expertise in web-based software development is top-notch having gained experience from Silicon Valley. With his personal and hands-on style of working with his team, he has put together a highly competent team that is able to deliver high-quality work on-time and within budget.
+                                      Semua berjalan lancar Barakallah. Terimakasih untuk semua keluarga besar Dal Tour, juga untuk semua keluarga besar peserta ibadah Umroh. Jazakallah Khairan.
                                         </p>
                                     </div>
                                 </div>
@@ -184,27 +172,22 @@ const PageHomeContainer = () => {
                                         <div className="header-testimonial">
                                             <img className="avatar" src="/assets/img/profile-5.png" />
                                             <div className="mx-3">
-                                                <p className="medium-text-semi m-0 name">Justin Lee</p>
-                                                <p className="small-text-regular m-0 text-left">CEO Point-Star.net</p>
-                                                <div>
-                                                    <img src="/assets/img/icon/start-fill.svg" alt="" />
-                                                    <img src="/assets/img/icon/start-fill.svg" alt="" />
-                                                    <img src="/assets/img/icon/start-fill.svg" alt="" />
-                                                    <img src="/assets/img/icon/start-fill.svg" alt="" />
-                                                    <img src="/assets/img/icon/start-outline.svg" alt="" />
-                                                </div>
+                                                <p className="medium-text-semi m-0 name">Keluarga Pak Ekhsyan</p>
+                                              
+                                           
                                             </div>
                                         </div>
-                                        <img src="/assets/img/icon/ic-pointstrart.png" alt="" />
+                                   
                                     </div>
                                     <div className="quote-container">
                                         <img src="/assets/img/icon/ic-quote.svg" alt="" />
                                         <p className="small-text-regular mx-2">
-                                            a [The CEO] is a sterling entrepreneur who has successfully built one of the best software development teams around. His knowledge and expertise in web-based software development is top-notch having gained experience from Silicon Valley. With his personal and hands-on style of working with his team, he has put together a highly competent team that is able to deliver high-quality work on-time and within budget.
+                                        Alhamdulillah, kami sekeluarga sudah sampai rumah di Yogya, tak lupa saya banyak haturkan terima kasih kepada Dal Tour yang banyak memberikan bimbingan selama di tanah suci serta kepada Ustadz Syuaib, Ustad Zulkifli, Ustad Junaidi, Ust. Rizal, serta seluruh jamaah Umroh Dal Tour yang kekeluargaannya sangat baik tidak bisa   dilupakan. Semoga tahun-tahun berikutnya, kita bisa bersama lagi dengan Biro Dal Tour. Aamiin.
                                         </p>
                                     </div>
                                 </div>
                             </SwiperSlide>
+                        
 
                         </div>
                     </Swiper>

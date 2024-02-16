@@ -284,7 +284,7 @@ export default function PageDaftarContainer() {
     return (
         <>
             <div className="contact-us">
-                <img src="/assets/img/bg-contact.png" className="radial" alt="" />
+                <img src="/assets/img/bg-wave.png" className="radial" alt="" />
                 <div className="container position-relative">
                     <h6 className="heading-regular-bold text-center">Formulir Pendaftaran Jamaah Umroh & Haji</h6>
                     <div className="row mb-5 mt-4 mx-0">
