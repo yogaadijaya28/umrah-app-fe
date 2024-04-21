@@ -29,9 +29,9 @@ export default function PageDaftarContainer() {
         email: '',
         heir: '',
         relationheir: '',
-        listbank:'',
-        accountnumber:'',
-        nameaccountnumber:'',
+        listbank: '',
+        accountnumber: '',
+        nameaccountnumber: '',
     });
 
     const [programs, setProgram] = useState<programResponse[]>([]);
@@ -224,9 +224,9 @@ export default function PageDaftarContainer() {
         email: Yup.string().required('Wajib Diisi'),
         heir: Yup.string().required('Wajib Diisi'),
         relationheir: Yup.string().required('Wajib Diisi'),
-        listbank:Yup.string().required('Wajib Diisi'),
-        accountnumber:Yup.string().required('Wajib Diisi'),
-        nameaccountnumber:Yup.string().required('Wajib Diisi'),
+        listbank: Yup.string().required('Wajib Diisi'),
+        accountnumber: Yup.string().required('Wajib Diisi'),
+        nameaccountnumber: Yup.string().required('Wajib Diisi'),
 
     });
 
@@ -581,19 +581,19 @@ export default function PageDaftarContainer() {
                                 </div>
                             </div>
 
-                            
-                        
-                                <div className="form-input mb-3">
-                                    <label htmlFor="nameaccountnumber" className="regular-text-regular mb-2">Atas Nama <span>*</span></label>
-                                    <input
-                                        type="text"
-                                        className="form-control"
-                                        placeholder="Nama Lengkap Pemilik Rekening "
-                                        {...register("nameaccountnumber", { required: true })}
-                                    />
-                                    <div id="nameaccountnumber-error" className={`text-danger regular-text-regular mt-1`}>{errors.nameaccountnumber?.message}</div>
-                                </div>
-                       
+
+
+                            <div className="form-input mb-3">
+                                <label htmlFor="nameaccountnumber" className="regular-text-regular mb-2">Atas Nama <span>*</span></label>
+                                <input
+                                    type="text"
+                                    className="form-control"
+                                    placeholder="Nama Lengkap Pemilik Rekening "
+                                    {...register("nameaccountnumber", { required: true })}
+                                />
+                                <div id="nameaccountnumber-error" className={`text-danger regular-text-regular mt-1`}>{errors.nameaccountnumber?.message}</div>
+                            </div>
+
 
                             <div className="form-input mb-0">
                                 <label htmlFor="idcard" className="medium-text-bold mb-2"> PILIHAN PROGRAM PEMBAYARAN  </label>
@@ -625,6 +625,13 @@ export default function PageDaftarContainer() {
                     </form>
                 </div>
             </div>
+
+          
+
         </>
+
+
+
+
     );
 }

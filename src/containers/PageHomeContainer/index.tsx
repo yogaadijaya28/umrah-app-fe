@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow } from 'swiper/modules';
+import Link from 'next/link';
 
 const PageHomeContainer = () => {
 
@@ -91,9 +92,9 @@ const PageHomeContainer = () => {
                                                 </div>
                                             </div>
                                             <div className="d-flex mt-4">
-                                                <a href='/daftar'>
+                                                <Link href='/daftar'>
                                                 <button type="button" className="btn btn-medium btn-primary">DAFTAR SEKARANG</button>
-                                                </a>
+                                                </Link>
                                                 {/* <button type="button" class="btn btn-medium btn-outline-blue mx-3">Learn more about hiring talent</button> */}
                                             </div>
                                         </div>
@@ -128,7 +129,7 @@ const PageHomeContainer = () => {
                                 <div className="card">
                                     <div className="quote-header">
                                         <div className="header-testimonial">
-                                            <img className="avatar" src="/assets/img/profile-5.png" />
+                                            <img alt='' className="avatar" src="/assets/img/profile-5.png" />
                                             <div className="mx-3">
                                                 <p className="medium-text-semi m-0 name">Keluarga Pak Ekhsyan</p>
                                               
@@ -149,7 +150,7 @@ const PageHomeContainer = () => {
                                 <div className="card">
                                     <div className="quote-header">
                                         <div className="header-testimonial">
-                                            <img className="avatar" src="/assets/img/profile-5.png" />
+                                            <img alt='' className="avatar" src="/assets/img/profile-5.png" />
                                             <div className="mx-3">
                                                 <p className="medium-text-semi m-0 name">Keluarga Pak Ahmad Syalabi</p>
                                               
@@ -170,7 +171,7 @@ const PageHomeContainer = () => {
                                 <div className="card">
                                     <div className="quote-header">
                                         <div className="header-testimonial">
-                                            <img className="avatar" src="/assets/img/profile-5.png" />
+                                            <img alt='' className="avatar" src="/assets/img/profile-5.png" />
                                             <div className="mx-3">
                                                 <p className="medium-text-semi m-0 name">Keluarga Pak Ekhsyan</p>
                                               

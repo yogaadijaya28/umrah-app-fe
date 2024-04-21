@@ -44,7 +44,7 @@ export function call({
         headersData = {
             ...(options && options.headers ? options.headers : {}),
             'Content-Type': 'application/json',
-            Authorization: `Bearer ce4174e03adb7b556637cf451d9ee297d2795d883f753fbf2cfb543a5f28b83f8e7ff699a95798c16ad76d34c24e116a60f58efdc6dc124c8fc1f2f7a26fdfda9556d24773c90948093a04b499c5cb7b2f82a8ec7cda8d172dd2cce1ccf2f84f03eccbc6dabdb7c1a54e7623ae2b38991c92c8eb1cb98db9a1fd7d5ac0c75ee7`,
+            Authorization: `Bearer ac9c3e3c78480db222503601c2b7151d66707760f0c1797bc8e2b875d7fc35923179ffdc3447588a65edaa91e4c2ce3586ebd22bcd295f1731953e1d76297696facd45afe9ab5e8ac71a956af87b33127a0856218b57f98449e669d955cdd54cb89168ddacb8dd1377259b217e1f322e88b73e705612403fbc7a33b13bb61838`,
         }
     }
 
