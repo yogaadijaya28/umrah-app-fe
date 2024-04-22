@@ -1,10 +1,12 @@
 export interface CommonStrapiResponse<T = any> {
     data: T
     meta: T
+    error: CommonStrapiError
 }
 export interface CommonStrapiArrayResponse<T = any> {
     data?: Array<T>
     meta?: CommonStrapiMeta
+    error: CommonStrapiError
 }
 
 export interface CommonStrapiMeta {
@@ -21,4 +23,11 @@ export interface CommonArrayResponse<T = any> {
     status?:number
     message?: string
     result?: Array<T>
+}
+
+export interface CommonStrapiError {
+    status: number
+    name: string
+    message: string
+    details: any
 }

@@ -17,9 +17,9 @@ export default function MenuComponent() {
                         </button>
                         <div className="collapse navbar-collapse" id="navbarCollapse">
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                                <li className="nav-item"><a className="nav-link medium-text-semi uppercase-text" href="">Umroh</a></li>
-                                <li className="nav-item"><a className="nav-link medium-text-semi uppercase-text" href="#">Haji Furoda</a></li>
-                                <li className="nav-item"><a className="nav-link medium-text-semi uppercase-text" href="#">Artikel</a></li>
+                                <li className="nav-item"><Link className="nav-link medium-text-semi uppercase-text" href='/umrah'>Umroh</Link></li>
+                                <li className="nav-item"><Link className="nav-link medium-text-semi uppercase-text" href='/haji-furoda'>Haji Furoda</Link></li>
+                                <li className="nav-item"><Link className="nav-link medium-text-semi uppercase-text" href='/artikel'>Artikel</Link></li>
                             </ul>
                             <form className="d-flex justify-content-between search-tech">
                                 <div style={{ position: 'relative' }}>
@@ -27,11 +27,11 @@ export default function MenuComponent() {
                                     <img src="/assets/img/icon/ic-search-2.svg" className="seach-nav" alt="" />
                                 </div>
                             </form>
-                            <a href='/daftar'>
+                            <Link href='/daftar'>
                             <button type="button" className="btn btn-medium btn-primary mx-2 py-1 uppercase-text">
 
                                 Daftar Sekarang</button>
-                                </a>
+                                </Link>
                         </div>
                     </div>
                 </nav>

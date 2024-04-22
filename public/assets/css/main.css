@@ -976,11 +976,11 @@ header {
 
 .banner-footer-work-permitt {
     background: var(--neutral-10);
-    padding: 50px 100px 0;
+    padding: 10px 50px 0;
     position: relative;
     border-radius: 20px;
-    min-height: 420px;
-    margin-bottom: 100px;
+    min-height: 350px;
+    /* margin-bottom: 100px; */
 }
 
 .banner-footer-work-permitt:before {
