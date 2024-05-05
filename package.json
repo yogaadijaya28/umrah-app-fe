@@ -49,6 +49,7 @@
     "react-slick": "^0.29.0",
     "react-toastify": "^9.1.1",
     "slick-carousel": "^1.8.1",
+    "tesseract.js": "^5.0.5",
     "tw-elements": "^1.0.0",
     "tw-elements-react": "^1.0.0-alpha1",
     "typescript": "5.2.2",

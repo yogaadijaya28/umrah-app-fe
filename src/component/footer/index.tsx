@@ -28,9 +28,13 @@ export default function FooterComponent() {
             <div className="col p-3">
               <p className="regular-text-bold mb-4">Popular</p>
               <ul className="regular-text-regular">
-                <li className="mt-1">Paket Umroh</li>
-                <li className="mt-1">Haji Furoda</li>
-                <li className="mt-1">Wisata Islami</li>
+              <li className="mt-1">
+                  <Link  className='nav-link' href="/umrah">Paket Umrah</Link>
+                </li>
+                <li className="mt-1">
+                  <Link  className='nav-link' href="/haji-furoda">Haji</Link>
+                </li>
+                {/* <li className="mt-1">Wisata Islami</li> */}
               </ul>
             </div>
             <div className="col p-3">

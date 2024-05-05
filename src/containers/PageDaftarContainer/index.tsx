@@ -3,13 +3,33 @@ import * as Yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { usePostClient } from "@/api/member/query";
 import { City, District, Province, Village, ZipCode, postClientParams } from "@/api/member/types";
-import { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { toast } from "react-toastify";
 import { UseGetProgram } from "@/api/masterData/province/query";
 import { programResponse } from "@/api/masterData/province/types";
+import OcrForm from "./OcrForm";
 
 
 export default function PageDaftarContainer() {
+    const imgInputRef:any = useRef(null);
+    const openBrowser = () =>{
+        imgInputRef.current?.click()
+    }
+
+    const [processing,setProcessing] = useState<boolean>(false)
+
+    const convert = async (url:string)=> {
+        if (url) {
+            setProcessing(true)
+            await OcrForm(url).then((txt) =>{
+                if (txt){
+                    console.log(txt)
+                }
+            })
+            setProcessing(false)
+
+        }
+    }
 
 
     const [postClient, setPostClient] = useState<postClientParams>({
@@ -260,9 +280,6 @@ export default function PageDaftarContainer() {
                     village: selectedVillageObject?.text || '',
                     zipcode: selectedZipCodeObject?.text || '',
 
-
-
-
                 };
 
                 PostClientController.mutate(payload);
@@ -278,6 +295,8 @@ export default function PageDaftarContainer() {
 
     // console.log("debug controller", GetProgramController);
     // console.log("debug program", programs);
+    // <input type="file" onChange={handleImageChange} />
+    
 
 
 
@@ -296,12 +315,41 @@ export default function PageDaftarContainer() {
                     </div>
                     <form onSubmit={onSubmit} className="m-auto register-form">
                         <div className="row">
+                            
 
                             <div className="form-input mb-0">
                                 <label htmlFor="idcard" className="medium-text-bold mb-2">DATA PRIBADI </label>
                             </div>
-
                             <div className="col-md-6">
+                                <div className="form-input mb-3">
+                                    <label htmlFor="firtsname" className="regular-text-regular mb-2">Upload Kartu Tanda Penduduk (KTP) <span>*</span></label>
+                                    <input
+                                        type="file"
+                                      
+                                        required
+                                        ref={imgInputRef}
+                                        className="form-control"
+                                        onChange={(e:React.ChangeEvent<HTMLInputElement>)=>{
+                                            if(e.target.files){
+                                                const url:string = URL.createObjectURL(e.target.files[0])
+                                                convert(url)
+                                            }
+                                        }}
+                                       
+                                    />
+                                    <div id="firtsname-error" className={`text-danger regular-text-regular mt-1`}>{errors.firtsname?.message}</div>
+                                </div>
+                                <div className="form-inputmb-3"
+                                onClick={openBrowser}
+                                >
+                                    <span>
+                                        {processing?"Processing Image ..." :"OPEN FILE"}
+                                    </span>
+                                   
+                                </div>
+                            </div>
+
+                            {/* <div className="col-md-6">
                                 <div className="form-input mb-3">
                                     <label htmlFor="firtsname" className="regular-text-regular mb-2">Nama Depan <span>*</span></label>
                                     <input
@@ -503,7 +551,7 @@ export default function PageDaftarContainer() {
                                     {...register("address", { required: true })}
                                 />
                                 <div id="address-error" className={`text-danger regular-text-regular mt-1`}>{errors.address?.message}</div>
-                            </div>
+                            </div> */}
 
                             <div className="form-input mb-0">
                                 <label htmlFor="idcard" className="medium-text-bold mb-2"> AHLI WARIS  </label>
@@ -620,7 +668,7 @@ export default function PageDaftarContainer() {
 
                         </div>
                         <div className="form-input mt-5 text-end">
-                            <button type="submit" className="btn btn-large btn-primary">DAFTAR SEKARANG & KIRIM</button>
+                            <button type="submit" className="btn btn-large btn-primary">DAFTAR</button>
                         </div>
                     </form>
                 </div>
