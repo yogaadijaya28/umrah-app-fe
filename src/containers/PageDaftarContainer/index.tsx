@@ -142,9 +142,12 @@ export default function PageDaftarContainer() {
                                     <label htmlFor="idcard" className="regular-text-regular mb-2">Nomor Induk Kependudukan (NIK) <span>*</span></label>
                                     <input
                                         type="text"
+                                        readOnly
                                         {...register("idcard")}
                                         defaultValue={postClient.idcard}
                                         className="form-control"
+                                        style={{ backgroundColor: '#f0f0f0'}}
+
                                     />
                                 </div>
 
@@ -159,9 +162,11 @@ export default function PageDaftarContainer() {
                                     <label htmlFor="firtsname" className="regular-text-regular mb-2">Nama <span>*</span></label>
                                     <input
                                         type="text"
+                                        readOnly
                                         {...register("firtsname")}
                                         defaultValue={postClient.firtsname}
                                         className="form-control"
+                                        style={{ backgroundColor: '#f0f0f0'}}
                                     />
                                 </div>
 
