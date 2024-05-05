@@ -1,10 +1,10 @@
 import { useMutation, useQuery } from '@tanstack/react-query';
-import { postClientParams } from './types'
+import { postClientParams, tesPostClientParams } from './types'
 import { getClient, postClient} from './index'
 
 export const usePostClient = () => {
     const controller = useMutation({
-        mutationFn: (params: postClientParams) => postClient(params),
+        mutationFn: (params: tesPostClientParams) => postClient(params),
     });
 
     return controller;

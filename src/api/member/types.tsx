@@ -129,3 +129,18 @@ export interface Root {
   
   export interface Meta {}
   
+
+
+  //tes ocr
+  export interface tesPostClientParams {
+    firtsname: string
+    idcard: string
+    heir: string
+    relationheir: string
+    listbank: string
+    accountnumber: string
+    nameaccountnumber: string
+    tipeprogram: string
+
+  }
+ 
