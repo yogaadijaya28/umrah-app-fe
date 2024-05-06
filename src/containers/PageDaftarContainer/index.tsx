@@ -1,6 +1,4 @@
 import { useForm } from "react-hook-form";
-import * as Yup from 'yup';
-import { yupResolver } from '@hookform/resolvers/yup';
 import { usePostClient } from "@/api/member/query";
 import { tesPostClientParams } from "@/api/member/types";
 import React, { useEffect, useRef, useState } from "react";
@@ -41,7 +39,7 @@ export default function PageDaftarContainer() {
                     const { nik, nama } = info;
                     setPostClient({
                         idcard: nik,
-                        firtsname: nama.split(' ')[0] || '',
+                        firtsname: nama,
                         heir: '',
                         relationheir: '',
                         listbank: '',
@@ -59,28 +57,15 @@ export default function PageDaftarContainer() {
 
 
 
-    const validationSchema = Yup.object().shape({
-        idcard: Yup.string().required('Wajib Diisi'),
-        firtsname: Yup.string().required('Wajib Diisi'),
-        heir: Yup.string().required('Wajib Diisi'),
-        relationheir: Yup.string().required('Wajib Diisi'),
-        listbank: Yup.string().required('Wajib Diisi'),
-        accountnumber: Yup.string().required('Wajib Diisi'),
-        nameaccountnumber: Yup.string().required('Wajib Diisi'),
-        tipeprogram: Yup.string().required('Wajib Diisi'),
-    });
 
-    const { register, handleSubmit, formState: { errors } } = useForm({
-        resolver: yupResolver(validationSchema),
-    });
+    const { register, handleSubmit } = useForm();
 
     const onSubmit = async (data: any) => {
-        console.log("Data yang dikirim:", data);
+        // console.log("Data yang dikirim:", data);
         try {
             const { firtsname, idcard, heir, relationheir, listbank, accountnumber, nameaccountnumber, tipeprogram } = data;
             const payload: tesPostClientParams = {
                 firtsname: firtsname,
-              
                 idcard: idcard,
                 heir: heir,
                 relationheir: relationheir,
@@ -99,9 +84,7 @@ export default function PageDaftarContainer() {
 
 
 
-    const openBrowser = () => {
-        imgInputRef.current?.click();
-    };
+  
 
     return (
         <>
@@ -119,8 +102,8 @@ export default function PageDaftarContainer() {
                     <form onSubmit={handleSubmit(onSubmit)} className="m-auto register-form">
                         <div className="row">
 
-                            <div className="form-input mb-3" onClick={openBrowser}>
-                                <label className="medium-text-bold ">{processing ? "Processing Image ..." : "Unggah KTP"}</label>
+                            <div className="form-input mb-3">
+                                <label className="medium-text-bold ">{processing ? "Proses Ekstraksi Data ..." : "Unggah KTP"}</label>
                             </div>
                             <input
                                 type="file"
@@ -143,17 +126,15 @@ export default function PageDaftarContainer() {
                                     <input
                                         type="text"
                                         readOnly
-                                        {...register("idcard")}
-                                        defaultValue={postClient.idcard}
+                                        {...register("idcard", { required: true })}
+                                        value={postClient.idcard}
                                         className="form-control"
                                         style={{ backgroundColor: '#f0f0f0'}}
 
                                     />
                                 </div>
 
-                         
-
-
+                        
 
                             </div>
                             <div className="col-md-6">
@@ -163,8 +144,8 @@ export default function PageDaftarContainer() {
                                     <input
                                         type="text"
                                         readOnly
-                                        {...register("firtsname")}
-                                        defaultValue={postClient.firtsname}
+                                        {...register("firtsname", { required: true })}
+                                        value={postClient.firtsname}
                                         className="form-control"
                                         style={{ backgroundColor: '#f0f0f0'}}
                                     />
